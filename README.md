@@ -1,7 +1,7 @@
 # algorithms
 Stanford Algorithms Courses
 
-<a href="https://travis-ci.org/koval80/algorithms">
+<a href="https://travis-ci.org/koval80/algorithms" target="_blank">
   <img title="Build status" src="https://travis-ci.org/koval80/algorithms.svg?branch=master"/>
 </a>
 
