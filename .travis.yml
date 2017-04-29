@@ -1,5 +1,19 @@
+#Also, see and consider: https://codefresh.io/vs-travis/
 language: java
 install: gradle assemble
 script: gradle check
 jdk:
   - oraclejdk8
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  on:
+    branch: master
+  local_dir: build/reports/tests #Directory to push to GitHub Pages, defaults to the current directory
+  #repo: Repo slug, defaults to current repo
+  #target_branch: Branch to push force to, defaults to gh-pages
+  #fqdn: Optional, sets a custom domain for your website, defaults to no custom domain support.
+  #project_name: Defaults to value of fqdn or repo slug, used for metadata
+  #email: Optional, comitter info, defaults to deploy@travis-ci.org
+  #name: Optional, comitter, defaults to Deployment Bot
